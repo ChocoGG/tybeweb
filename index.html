@@ -5,25 +5,82 @@
     <meta http-equiv="X-UA-Compatible" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="dist/style.css" />
-    <title>Tybe</title>
+    <title>Tybe Media</title>
   </head>
-  <body style="background: rgb(29, 29, 29)">
+
+  <body style="background: rgb(0, 0, 0)">
+    <!-- nav-bar -->
     <div
       style="
-        display: flex;
-        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        margin-top: 15%;
+        z-index: 1;
+        display: flex;
+        justify-content: space-around;
+        font-size: 36pt;
+        font-family: 'Bebas Neue', cursive;
+        background: black;
       "
     >
-      <div style="display: flex; flex-direction: column">
-        <h1 style="color: rgb(184, 184, 184); font-size: 164pt">TYBE Media</h1>
-        <h2
-          style="color: rgb(184, 184, 184); font-size: 72pt; margin-top: -30pt"
-        >
-          www.tybe.it
+      <img src="logo.png" style="height: 150px; width: 150px" />
+      <span style="margin-top: 1em" class="active-item">Start</span>
+      <span style="margin-top: 1em"><a href="#aboutMe">Über mich</a></span>
+      <span style="margin-top: 1em"><a href="#projects">Projekte</a></span>
+      <span style="margin-top: 1em"><a href="#whyUs">Warum uns?</a></span>
+      <span style="margin-top: 1em"><a href="#contact">Kontakt</a></span>
+      <span style="margin-top: calc(1em + 36pt); font-size: 12pt"
+        ><a href="./impress.html">Impressum & AGB</a></span
+      >
+    </div>
+    <div class="intro-container">
+      <div class="intro-heading">
+        <h1>Tybe Media</h1>
+        <h2 style="font-size: 36pt">
+          Ihr Partner für einen modernen Webauftritt
         </h2>
       </div>
+      <img
+        src="codingShot.jpg"
+        style="
+          height: calc(100vh - 150px);
+          width: auto;
+          float: right;
+          margin-top: 7em;
+          border-radius: 1em;
+        "
+      />
     </div>
+    <h1 style="font-size: 72pt">
+      Diese Seite wird aktuell weiter entwickelt, schauen Sie gerne bald erneut
+      vorbei!
+    </h1>
   </body>
+  <!-- Footer -->
+  <footer
+    style="
+      background: #1e1b1b;
+      height: 150px;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    "
+  >
+    <div>
+      <h2 style="margin-bottom: 0">Info</h2>
+      Tybe Media | Timo Beyer<br />
+      +49 1515 4738083<br />
+      info@tybe-media.com<br />
+    </div>
+    <div>
+      <h2>Social Media</h2>
+      <a href="https://www.instagram.com/tybemedia/" target="_blank"
+        >Instagram</a
+      >
+    </div>
+    <div>
+      <h2><a href="./impress.html"> Impressum</a></h2>
+    </div>
+  </footer>
 </html>
