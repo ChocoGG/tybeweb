@@ -6,56 +6,190 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="dist/style.css" />
     <title>Tybe Media</title>
+    <script>
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+    document.getElementById("logo").style.display = "none";
+  } else {
+    x.className = "topnav";
+    document.getElementById("logo").style.display = "block";
+  }
+} 
+if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  document.getElementById("logo").style.height = "75px";
+    document.getElementById("logo").style.width = "75px";
+}
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("logo").style.height = "75px";
+    document.getElementById("logo").style.width = "75px";
+  } else {
+    document.getElementById("logo").style.height = "150px";
+    document.getElementById("logo").style.width = "150px";
+}
+} 
+    </script>
   </head>
 
   <body style="background: rgb(0, 0, 0)">
     <!-- nav-bar -->
-    <div
-      style="
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1;
-        display: flex;
-        justify-content: space-around;
-        font-size: 36pt;
-        font-family: 'Bebas Neue', cursive;
-        background: black;
-      "
-    >
-      <img src="logo.png" style="height: 150px; width: 150px" />
-      <span style="margin-top: 1em" class="active-item">Start</span>
-      <span style="margin-top: 1em"><a href="#aboutMe">Über mich</a></span>
-      <span style="margin-top: 1em"><a href="#projects">Projekte</a></span>
-      <span style="margin-top: 1em"><a href="#whyUs">Warum uns?</a></span>
-      <span style="margin-top: 1em"><a href="#contact">Kontakt</a></span>
-      <span style="margin-top: calc(1em + 36pt); font-size: 12pt"
-        ><a href="./impress.html">Impressum & AGB</a></span
-      >
+    <div class="topnav" id="myTopnav">
+         <img src="logo.png" id="logo" style="width: 150px;height: 150px; float: left; margin-right: 1em" />
+      <a href="#home" class="active">Start</a>
+      <a href="#aboutMe">Über mich</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projekte</a>
+      <a href="#contact">Kontakt</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i><svg height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></i>
+      </a>
     </div>
     <div class="intro-container">
-      <div class="intro-heading">
-        <h1>Tybe Media</h1>
-        <h2 style="font-size: 36pt">
-          Ihr Partner für einen modernen Webauftritt
-        </h2>
-      </div>
       <img
-        src="codingShot.jpg"
-        style="
+      src="codingShot.jpg"
+      style="
           height: calc(100vh - 150px);
           width: auto;
           float: right;
-          margin-top: 7em;
           border-radius: 1em;
         "
+        id="codingShotImg"
       />
+      <div class="intro-heading">
+        <div>
+          <h1>Tybe Media</h1>
+          <h2 style="font-size: 36pt">
+            Ihr Partner für einen modernen Webauftritt
+          </h2>
+        </div>
+      </div>
     </div>
-    <h1 style="font-size: 72pt">
-      Diese Seite wird aktuell weiter entwickelt, schauen Sie gerne bald erneut
-      vorbei!
-    </h1>
+    <hr style="color: white; width: 300px; float: left; margin-top: 5em" />
+    <!-- About me -->
+    <div style="margin-top: 7em;">
+      <h1 id="aboutMe">Über mich</h1>
+      <div style="display: flex; justify-content: space-between; width: 100%">
+        <img src="./CutoutMe.png" style="max-width: 50vw; height: auto;align-self: center;";/>
+        <div style="width: calc(50% - 2em); margin-left: 2em">
+          <div class="speechbubble border-shadow">
+            <h1 style="font-size: 58pt; margin: 0">Ich bin Timo</h1>
+            <h2
+              style="font-size: 36pt; margin-top: 1em; margin-bottom: 0.5em"
+            >
+              Webdesigner & Programmierer
+            </h2>
+            <div style="font-size: 18pt">
+              <span class="dot"></span> Ausbildung zum Fullstack Developer
+              11.2018 - 06.2021<br />
+              <span class="dot"></span> Erstes Webprojekt für Kunden 02.2021<br />
+              <span class="dot"></span> Gründung Tybe Media 01.04.2021
+            </div>
+          </div>
+          <span style="font-size: 92pt; margin-left: 2em"><></span>
+        </div>
+      </div>
+    </div>
+    <!-- Services -->
+    <hr style="color: white; width: 300px; float: left" />
+    <h1 id="services">Services</h1>
+    <div class="services" style="margin-bottom: 1em;">
+    <div>
+      <h1>Webdesign</h1>
+        # Modern 
+        # Responsive
+        # Frei nach Wunsch #
+        <p>Ihr Projekt wird nach den neuesten Standarts umgesetzt und ist auf allen gängigen Geräten schön zu benutzen, Ihren Wünschen sind dabei keine Grenzen gesetzt</p>
+    </div>
+    <div class="blueprint" >
+          <h1>Logo & Grafikdesign</h1>
+                Sie haben noch kein Logo? Kein Problem, dafür haben wir Experten!<br>
+        <div style="display: flex; align-items: center; justify-content: space-around;margin-top: 1em;width: 100%;">
+          <img src="./images/Logo1.svg" width="100px">
+          <img src="./images/Logo2.svg" width="250px"  >
+        </div>
+    </div>
+    <div style="background: white; color: black">
+      <h1 style="font-weight: 1500;">
+        <span style="color: #4285f4">G</span>
+        <span style="color: #ea4335">o</span>
+        <span style="color: #fbbc05">o</span>
+        <span style="color: #4285f4">g</span>
+        <span style="color: #34a853">l</span>
+        <span style="color: #ea4335">e </span> 
+        <span style="color: #4285f4">S</span> 
+        <span style="color: #34a853">E</span> 
+        <span style="color: #ea4335">O</span> 
+      </h1>
+      <div style="padding: 1em; border: 1px solid #dfe1e5; border-radius: 24px; width: 90%;display: flex; justify-content: space-between;align-items: center;">
+        <div><img src="./images/searchSmall.png"></div>
+        Wir kümmern uns darum, dass Ihre Internetpräsenz gut zu finden ist und Sie dadurch ihren Kundenkreis erweitern können.
+      </div>
+      <div style="display: flex; justify-content: space-around;margin-top: 0.5em">
+        <div style="    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+        background-color: #f8f9fa;
+        border: 1px solid #dadce0;
+        color: #202124;padding: 0.25em">Tybe Media</div>
+        <div style="box-shadow: 0 1px 1px rgba(0,0,0,.1);
+        background-color: #f8f9fa;
+        border: 1px solid #dadce0;
+        color: #202124; padding: 0.25em">Auf gut Glück!</div>
+      </div>
+    </div>
+    <div>
+      <h1>Hosting & Support</h1>
+      Gerne kümmern wir uns bei Bedarf auch darum, dass ihre Webseite auf einem Server gehostet ist. 
+    </div>
+    </div>
+    <!-- Projects -->
+    <hr style="color: white; width: 300px; float: left;" /><br>
+    <h1 id="projects">Projekte Portfolio</h1>
+    <div style="display: flex; justify-content: space-between">
+      <div class="project-card border-shadow" style="width: 50%">
+        <h1>Koinzer Altbausanierung</h1>
+        <div
+          style="
+            border: solid white 12px;
+            height: 300px;
+            width: 611px;
+            border-radius: 30px;
+          "
+        >
+          <img src="mtqGkiXuRh (3).gif" style="height: 300px; width: auto" />
+          </div>
+          <div style="margin-top: 1em; text-align:start;">
+            Koinzer Altbausanierung ist ein Handwerksbetrieb aus
+            Norddeutschland, <br>der vor unserer Arbeit im Internet nicht zu finden war.<br>
+            Durch Tybe-Media konnte das Unternehmen bereits mehrere Kunden
+            gewinnen, <br>welche über Google Suchanfragen auf dieses aufmerksam
+            wurden.<br> 
+            Wichtige Punkte waren dem Kunden bei der Umsetzung,<br> möglichst viele
+            Bilder und Tätigkeiten zu beschreiben, aber die Seite dabei schlicht
+            zu halten.<br>
+            Wir haben eigene Texte verfasst und mit einer Gallerie erweitert, <br>um
+            möglichst viele Eindrücke zu schaffen.
+          </div>
+          <a href="https://bautalent.de"><h2>-> Selber überzeugen <-</h2></a>
+        </div>
+      </div>
+    </div>
+    <div></div>
+    <!-- Contact -->
+    <div style="margin-top: 10em">
+      <hr style="color: white; width: 300px; float: left" />
+      <br />
+      <h1 id="contact">Interesse geweckt?</h1>
+      <div>
+        <h2>Melde dich gerne bei Uns <br><br>
+      +49 1515 4738083
+        Oder
+        <a href="mailto:info@tybe-media.com">info@tybe-media.com</a> </h2>
+      </div>
+    </div>
   </body>
   <!-- Footer -->
   <footer
