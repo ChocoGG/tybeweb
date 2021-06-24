@@ -18,7 +18,6 @@ function myFunction() {
     document.getElementById("logo").style.display = "block";
   }
 } 
-alert("Diese Seite befindet sich aktuell in der Bearbeitung, trotzdem fortfahren?");
 if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   document.getElementById("logo").style.height = "75px";
     document.getElementById("logo").style.width = "75px";
@@ -54,7 +53,7 @@ function scrollFunction() {
       <img
       src="codingShot.jpg"
       style="
-          height: calc(100vh - 150px);
+          /* height: calc(100vh - 150px); */
           width: auto;
           float: right;
           border-radius: 1em;
@@ -70,17 +69,16 @@ function scrollFunction() {
         </div>
       </div>
     </div>
-    <hr style="color: white; width: 300px; float: left; margin-top: 5em" />
+    <hr style="color: white; width: 300px; float: left;" />
     <!-- About me -->
-    <div style="margin-top: 7em;">
+    <div>
       <h1 id="aboutMe">Über mich</h1>
-      <div style="display: flex; justify-content: space-between; width: 100%">
+      <div class="aboutMe">
         <img src="./CutoutMe.png" style="max-width: 50vw; height: auto;align-self: center;";/>
-        <div style="width: calc(50% - 2em); margin-left: 2em">
           <div class="speechbubble border-shadow">
             <h1 style="font-size: 58pt; margin: 0">Ich bin Timo</h1>
             <h2
-              style="font-size: 36pt; margin-top: 1em; margin-bottom: 0.5em"
+              style="font-size: 32pt; margin-top: 1em; margin-bottom: 0.5em"
             >
               Webdesigner & Programmierer
             </h2>
@@ -92,7 +90,6 @@ function scrollFunction() {
             </div>
           </div>
           <span style="font-size: 92pt; margin-left: 2em"><></span>
-        </div>
       </div>
     </div>
     <!-- Services -->
@@ -111,7 +108,7 @@ function scrollFunction() {
                 Sie haben noch kein Logo? Kein Problem, dafür haben wir Experten!<br>
         <div style="display: flex; align-items: center; justify-content: space-around;margin-top: 1em;width: 100%;">
           <img src="./images/Logo1.svg" width="100px">
-          <img src="./images/Logo2.svg" width="250px"  >
+          <img src="./images/Logo2.svg" width="175px"  >
         </div>
     </div>
     <div style="background: white; color: black">
@@ -126,11 +123,11 @@ function scrollFunction() {
         <span style="color: #34a853">E</span> 
         <span style="color: #ea4335">O</span> 
       </h1>
-      <div style="padding: 1em; border: 1px solid #dfe1e5; border-radius: 24px; width: 90%;display: flex; justify-content: space-between;align-items: center;">
+      <div style="padding: 0.5em; border: 1px solid #dfe1e5; border-radius: 24px; width: 90%;display: flex; justify-content: space-between;align-items: center;">
         <div><img src="./images/searchSmall.png"></div>
         Wir kümmern uns darum, dass Ihre Internetpräsenz gut zu finden ist und Sie dadurch ihren Kundenkreis erweitern können.
       </div>
-      <div style="display: flex; justify-content: space-around;margin-top: 0.5em">
+      <div style="display: flex; justify-content: space-around;margin-top: 0.25em">
         <div style="    box-shadow: 0 1px 1px rgba(0,0,0,.1);
         background-color: #f8f9fa;
         border: 1px solid #dadce0;
@@ -156,11 +153,12 @@ function scrollFunction() {
           style="
             border: solid white 12px;
             height: 300px;
-            width: 611px;
+            width: 81vw;
+            max-width: 611px;
             border-radius: 30px;
           "
         >
-          <img src="mtqGkiXuRh (3).gif" style="height: 300px; width: auto" />
+          <img src="mtqGkiXuRh (3).gif" style="height: auto; width: 80vw;max-width: 611px; align-self: center;" />
           </div>
           <div style="margin-top: 1em; text-align:start;">
             Koinzer Altbausanierung ist ein Handwerksbetrieb aus
