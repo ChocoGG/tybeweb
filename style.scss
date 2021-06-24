@@ -216,4 +216,18 @@ background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
 .services div{
   width: 100%;
 }
+.blueprint{
+  img:first-child{
+    width: 19%;
+  }
+  img:last-child{
+    width: 60%;
+  }
+}
+footer{
+  flex-direction: column;
+  div::after{
+    content: "____________"
+  }
+}
 } 

@@ -229,4 +229,18 @@ a {
   .services div {
     width: 100%;
   }
+
+  .blueprint img:first-child {
+    width: 19%;
+  }
+  .blueprint img:last-child {
+    width: 60%;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+  footer div::after {
+    content: "____________";
+  }
 }
