@@ -11,6 +11,7 @@ html, body {
 }
 
 .intro-container {
+  margin-top: 150px;
   display: flex;
   justify-content: space-between;
 }
@@ -74,12 +75,6 @@ a {
 }
 .project-card .dot {
   margin-right: 1em;
-}
-
-.speechbubble {
-  background: #171717;
-  border-radius: 5em;
-  padding: 2em;
 }
 
 .border-shadow {
@@ -159,7 +154,7 @@ a {
 
 .aboutMe {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 }
 
@@ -220,10 +215,6 @@ a {
   .aboutMe div {
     width: 100% o !important;
   }
-
-  .speechbubble {
-    margin: 1em;
-  }
 }
 @media screen and (max-width: 850px) {
   .services div {
@@ -243,4 +234,9 @@ a {
   footer div::after {
     content: "____________";
   }
+}
+hr {
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
 }

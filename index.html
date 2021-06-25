@@ -28,9 +28,12 @@ function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     document.getElementById("logo").style.height = "75px";
     document.getElementById("logo").style.width = "75px";
+    document.getElementById("intro-container").style.marginTop = "0px";
+
   } else {
     document.getElementById("logo").style.height = "150px";
     document.getElementById("logo").style.width = "150px";
+    document.getElementById("intro-container").style.marginTop = "150px";
 }
 } 
     </script>
@@ -49,7 +52,7 @@ function scrollFunction() {
         <i><svg height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></i>
       </a>
     </div>
-    <div class="intro-container">
+    <div class="intro-container" id="intro-container">
       <img
       src="codingShot.jpg"
       style="
@@ -69,31 +72,27 @@ function scrollFunction() {
         </div>
       </div>
     </div>
-    <hr style="color: white; width: 300px; float: left;" />
+    <hr/>
     <!-- About me -->
     <div>
       <h1 id="aboutMe">Über mich</h1>
       <div class="aboutMe">
-        <img src="./CutoutMe.png" style="max-width: 50vw; height: auto;align-self: center;";/>
-          <div class="speechbubble border-shadow">
-            <h1 style="font-size: 58pt; margin: 0">Ich bin Timo</h1>
-            <h2
-              style="font-size: 32pt; margin-top: 1em; margin-bottom: 0.5em"
-            >
-              Webdesigner & Programmierer
-            </h2>
+        <img src="./CutoutMe.png" style="width: 80vw;max-width: 600px; height: auto;align-self: center;";/>
+          <div style="text-align: center;">
+            <h1 style="margin: 0">Ich bin Timo</h1>
+            <h2>Webdesigner & Programmierer</h2>
             <div style="font-size: 18pt">
-              <span class="dot"></span> Ausbildung zum Fullstack Developer
+              <span class="dot"></span> Ausbildung zum Fullstack Entwickler
               11.2018 - 06.2021<br />
-              <span class="dot"></span> Erstes Webprojekt für Kunden 02.2021<br />
+              <span class="dot"></span> Erstes eigenes Kundenprojekt 02.2021<br />
               <span class="dot"></span> Gründung Tybe Media 01.04.2021
             </div>
+            <span style="font-size: 92pt;"><></span>
           </div>
-          <span style="font-size: 92pt; margin-left: 2em"><></span>
       </div>
     </div>
     <!-- Services -->
-    <hr style="color: white; width: 300px; float: left" />
+    <hr style="content: 't'"/>
     <h1 id="services">Services</h1>
     <div class="services" style="margin-bottom: 1em;">
     <div>
@@ -144,7 +143,7 @@ function scrollFunction() {
     </div>
     </div>
     <!-- Projects -->
-    <hr style="color: white; width: 300px; float: left;" /><br>
+    <hr /><br>
     <h1 id="projects">Projekte Portfolio</h1>
     <div style="display: flex; justify-content: space-between">
       <div class="project-card border-shadow" style="width: 50%">
@@ -179,7 +178,7 @@ function scrollFunction() {
     <div></div>
     <!-- Contact -->
     <div style="margin-top: 10em">
-      <hr style="color: white; width: 300px; float: left" />
+      <hr />
       <br />
       <h1 id="contact">Interesse geweckt?</h1>
       <div>

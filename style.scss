@@ -10,6 +10,7 @@ html, body {
     padding: 0;
 }
 .intro-container{
+  margin-top: 150px;
     img {
         -webkit-filter: grayscale(100%);
         -moz-filter: grayscale(100%);
@@ -75,11 +76,6 @@ height: 100%;
 }
   }
 
-  .speechbubble{
-      background: #171717;
-      border-radius: 5em;
-      padding: 2em;
-  }
   .border-shadow{
     box-shadow: 0 2px 1px -1px rgb(100, 100, 100),
     0 1px 1px 0 rgb(100, 100, 100),
@@ -155,7 +151,7 @@ background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
 } 
 
 
-.aboutMe{display: flex; justify-content: space-between; width: 100%}
+.aboutMe{display: flex; justify-content: space-around; width: 100%}
  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 1150px) {
   .topnav a:not(:first-child) {display: none;}
@@ -207,9 +203,6 @@ background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
   .aboutMe  div{
     width: 100% o !important;
   }
-  .speechbubble{
-    margin: 1em;
-  }
 } 
 
 @media screen and (max-width: 850px) {
@@ -231,3 +224,9 @@ footer{
   }
 }
 } 
+
+hr{
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
