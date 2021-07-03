@@ -72,6 +72,9 @@ a {
   margin: 1em;
   font-size: 16pt;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .project-card .dot {
   margin-right: 1em;
@@ -219,6 +222,10 @@ a {
 @media screen and (max-width: 850px) {
   .services div {
     width: 100%;
+  }
+
+  .project-card {
+    margin: 0.5em;
   }
 
   .blueprint img:first-child {

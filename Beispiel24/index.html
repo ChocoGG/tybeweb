@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/style.css" />
+    <title>FictiveSuperCarRent24</title>
+    <script>
+      let carData = [
+        {
+          name: "Porsche 911",
+          hp: 325,
+          url: "https://images.unsplash.com/photo-1611651336487-802fe164d3e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80",
+          price: 300000,
+        },
+      ];
+      window.addEventListener("load", function () {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("content").style.opacity = 1;
+      });
+      function testAlert() {
+        alert(
+          "This is a Test-Application, if you are interested in a project, contact us info@tybe-media.com \n\n\n Es handelt sich um eine Test-Applikation, bei Interesse an einem Projekt können Sie uns gerne unter info@tybe-media.com kontaktieren"
+        );
+      }
+
+      function openModal(id) {
+        modal.style.display = "block";
+        document.getElementById("modalModel").innerHTML = carData[0].name;
+        document.getElementById("modalHp").innerHTML = carData[0].hp;
+        document.getElementById("modalPrice").innerHTML = carData[0].price;
+        document.getElementById("modalRentalPrice").innerHTML = Math.round(
+          (carData[0].price / 100) * 0.035
+        );
+        document.getElementById("modalImage").src =
+          "https://images.unsplash.com/photo-1611651336487-802fe164d3e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"; //carData[0].url;
+      }
+    </script>
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        margin-top: calc(50% - 36pt);
+      "
+      id="loading"
+    >
+      <div style="font-size: 36pt" class="loader"></div>
+    </div>
+    <div id="content" style="opacity: 0">
+      <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+      </div>
+      <div
+        style="
+          background: rgb(24, 24, 24);
+          width: 100%;
+          height: 75px;
+          display: flex;
+          align-items: center;
+          position: fixed;
+          top: 0;
+          z-index: 4;
+        "
+        id="start"
+      >
+        <h1 style="margin: 0; font-family: 'Dela Gothic One', cursive">
+          FictiveSuperCarRent24
+        </h1>
+        <div
+          style="
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-left: 50%;
+          "
+        >
+          <a href="#start"><h2>Mieten</h2></a>
+          <a href="#fleet"><h2>Unsere Fahrzeuge</h2></a>
+          <a onclick="testAlert()"><h2>Impressum / AGB</h2></a>
+        </div>
+      </div>
+      <div class="order-area">
+        <h1>Mieten sie Ihren Traumwagen</h1>
+        <div>
+          <div class="pickup-form-textinput">
+            <div>
+              <div><img src="img/dateIcon.png" /></div>
+              <input type="text" name="location" placeholder="Ort" />
+            </div>
+            <div>
+              <div>
+                <img src="img/dateIcon.png" />
+              </div>
+              <input type="date" name="pickupDate" placeholder="Abholdatum" />
+            </div>
+            <div>
+              <div>
+                <img src="img/dateIcon.png" />
+              </div>
+              <input type="date" name="returnDate" placeholder="Abgabe Datum" />
+            </div>
+          </div>
+        </div>
+        <br />
+        <button
+          class="primary-button"
+          style="align-self: flex-end; width: 30%"
+          onclick="testAlert()"
+        >
+          Suche
+        </button>
+      </div>
+      <div style="margin-top: calc(100vh - 89px); background: #3b3b3b">
+        <div style="padding: 0.5em 0 0 0.5em; display: flex">
+          <img src="img/downIconWhite.png" />
+          <h1 id="fleet">Unsere Flotte</h1>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img
+              src="https://images.unsplash.com/photo-1611651336487-802fe164d3e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1527247043589-98e6ac08f56c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1603553329474-99f95f35394f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1617788138017-80ad40651399?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80"
+            />
+
+            <img
+              src="https://images.unsplash.com/photo-1587304878428-1b533030e0e7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+            />
+          </div>
+          <div class="column">
+            <img
+              src="https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1519245659620-e859806a8d3b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1578148103598-aed9e3871003?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1581610997355-9211bacca170?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8c3VwZXJzcG9ydHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1147&q=80"
+            />
+          </div>
+          <div class="column">
+            <img
+              src="https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1605557713876-148ede2bbb3c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1526&q=80"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1619329928488-d4bc01e4b100?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1559038465-e0ca2910a5b1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZyUyMHdhZ29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1615839399574-c842427f9862?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            />
+          </div>
+          <div class="column">
+            <img
+              src="https://images.unsplash.com/photo-1618205062886-3976f4bb8219?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1615839399574-c842427f9862?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1559285695-21f8738d0697?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1568772585432-0bcd9add44f5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+            />
+          </div>
+        </div>
+        <!-- <div class="showcase-boxes">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1611651336487-802fe164d3e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+            />
+            <button
+              class="primary-button"
+              onclick="openModal(1)"
+              style="width: 100%"
+            >
+              Book me
+            </button>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1527247043589-98e6ac08f56c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            />
+            <button class="primary-button openDialogBtn" style="width: 100%">
+              Book me
+            </button>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1603553329474-99f95f35394f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            />
+            <button class="primary-button openDialogBtn" style="width: 100%">
+              Book me
+            </button>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1605557713876-148ede2bbb3c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1526&q=80"
+            />
+            <button class="primary-button openDialogBtn" style="width: 100%">
+              Book me
+            </button>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1615839399574-c842427f9862?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            />
+            <button class="primary-button openDialogBtn" style="width: 100%">
+              Book me
+            </button>
+          </div>
+          <div>
+            <img
+  https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80            src=""
+            />
+            <button class="primary-button openDialogBtn" style="width: 100%">
+              Book me
+            </button>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1578148103598-aed9e3871003?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            />
+            <button class="primary-button openDialogBtn" style="width: 100%">
+              Book me
+            </button>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1581610997355-9211bacca170?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8c3VwZXJzcG9ydHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            />
+            <button class="primary-button openDialogBtn" style="width: 100%">
+              Book me
+            </button>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1568772585432-0bcd9add44f5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+            />
+            <button class="primary-button openDialogBtn" style="width: 100%">
+              Book me
+            </button>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            />
+            <button class="primary-button openDialogBtn" style="width: 100%">
+              Book me
+            </button>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1618205062886-3976f4bb8219?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+            />
+            <button class="primary-button openDialogBtn" style="width: 100%">
+              Book me
+            </button>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1619329928488-d4bc01e4b100?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+            />
+            <button class="primary-button openDialogBtn" style="width: 100%">
+              Book me
+            </button>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1559038465-e0ca2910a5b1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZyUyMHdhZ29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            />
+            <button class="primary-button openDialogBtn" style="width: 100%">
+              Book me
+            </button>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1587304878428-1b533030e0e7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+            />
+            <button class="primary-button openDialogBtn" style="width: 100%">
+              Book me
+            </button>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1617788138017-80ad40651399?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80"
+            />
+            <button class="primary-button openDialogBtn" style="width: 100%">
+              Book me
+            </button>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1559285695-21f8738d0697?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            />
+            <button class="primary-button openDialogBtn" style="width: 100%">
+              Book me
+            </button>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </body>
+  <footer
+    style="
+      background: #1e1b1b;
+      padding: 1em 2em 2em 2em;
+      display: flex;
+      justify-content: space-around;
+    "
+  >
+    <div>
+      <h2>Info</h2>
+      Das gezeigte Unternehmen "FictiveSuperCarRent24" ist fiktiv und dient
+      lediglich als Beispiel für die Webdesign Tätigkeiten von Tybe Media.
+    </div>
+    <div>
+      <h2 style="margin-bottom: 0">Kontakt</h2>
+      Tybe Media | Timo Beyer<br />
+      +49 1515 4738083<br />
+      info@tybe-media.com<br />
+    </div>
+    <div>
+      <h2 style="margin-bottom: 0.15em">Social Media</h2>
+      <a href="https://www.instagram.com/tybemedia/" target="_blank"
+        >Instagram</a
+      ><br />
+    </div>
+  </footer>
+</html>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div style="display: flex">
+      <img
+        src="https://images.unsplash.com/photo-1611651336487-802fe164d3e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+        id="modalImage"
+        height="500px"
+        width="auto"
+      />
+      <div
+        style="color: black; display: flex; flex-direction: column; width: 100%"
+      >
+        <div>
+          <div
+            style="
+              display: flex;
+              justify-content: space-around;
+              width: 100%;
+              z-index: 6;
+            "
+          >
+            <div class="gauge-box border-shadow">
+              <span style="font-size: 36pt" id="modalModel">Car</span>
+              <span style="font-size: 24pt">Model</span>
+            </div>
+            <div class="gauge-box border-shadow">
+              <span style="font-size: 36pt" id="modalHp">0</span>
+              <span style="font-size: 24pt">HP</span>
+            </div>
+            <div class="gauge-box border-shadow">
+              <span style="font-size: 36pt" id="modalPrice">0</span>
+              <span style="font-size: 24pt">Total Price</span>
+            </div>
+            <div class="gauge-box border-shadow">
+              <span style="font-size: 36pt" id="modalRentalPrice">0</span>
+              <span style="font-size: 24pt">Rental Price (H)</span>
+            </div>
+          </div>
+          <div class="order-area" style="position: relative"></div>
+          <h1>Mieten sie Ihren Traumwagen</h1>
+          <div>
+            <div class="pickup-form-textinput">
+              <div>
+                <div><img src="img/dateIcon.png" /></div>
+                <input type="text" name="location" placeholder="Ort" />
+              </div>
+              <div>
+                <div>
+                  <img src="img/dateIcon.png" />
+                </div>
+                <input type="date" name="pickupDate" placeholder="Abholdatum" />
+              </div>
+              <div>
+                <div>
+                  <img src="img/dateIcon.png" />
+                </div>
+                <input
+                  type="date"
+                  name="returnDate"
+                  placeholder="Abgabe Datum"
+                />
+              </div>
+            </div>
+          </div>
+          <br />
+          <button
+            class="primary-button"
+            style="float: right; width: 30%"
+            onclick="testAlert()"
+          >
+            Buchen
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var buttons = document.getElementsByClassName("openDialogBtn");
+  console.log(buttons);
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on the button, open the modal
+  for (el of buttons) {
+    el.onclick = function () {
+      modal.style.display = "block";
+    };
+  }
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
