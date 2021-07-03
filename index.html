@@ -6,6 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="dist/style.css" />
     <title>Tybe Media</title>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+</script>
+    <script type="text/javascript">
+       emailjs.init("user_SGnVUcBXkp3FtaIz8RMoo");
+  function sendEmail() {
+    let firstname = document.getElementById("firstname").value;
+    let lastname = document.getElementById("lastname").value;
+    let mail = document.getElementById("mail").value;
+    let phone = document.getElementById("phone").value;
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("message").value;
+
+    var templateParams = {
+    firstname: firstname,
+    lastname: lastname,
+    mail: mail,
+    phone: phone,
+    subject: subject,
+    message: message
+};
+emailjs.send('service_pwkxoon', 'template_swvdnbn', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+    }
+    </script>
     <script>
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
@@ -18,58 +47,42 @@ function myFunction() {
     document.getElementById("logo").style.display = "block";
   }
 } 
-if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-  document.getElementById("logo").style.height = "75px";
-    document.getElementById("logo").style.width = "75px";
-}
-
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("logo").style.height = "75px";
-    document.getElementById("logo").style.width = "75px";
-    document.getElementById("intro-container").style.marginTop = "0px";
-
-  } else {
-    document.getElementById("logo").style.height = "150px";
-    document.getElementById("logo").style.width = "150px";
-    document.getElementById("intro-container").style.marginTop = "150px";
-}
-} 
     </script>
   </head>
 
-  <body style="background: rgb(0, 0, 0)">
+  <body style="background: black">
+   
     <!-- nav-bar -->
     <div class="topnav" id="myTopnav">
-         <img src="logo.png" id="logo" style="width: 150px;height: 150px; float: left; margin-right: 1em" />
-      <a href="#home" class="active">Start</a>
-      <a href="#aboutMe">Über mich</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Projekte</a>
-      <a href="#contact">Kontakt</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i><svg height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></i>
-      </a>
+         <img src="logo.png" id="logo" style="width: 75px;height: 75px; float: left; margin-right: 1em" />
+      <div>
+        <a href="#home" class="active">Start</a>
+        <a href="#aboutMe">Über mich</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projekte</a>
+        <a href="#contact">Kontakt</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i><svg height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></i>
+        </a>
+      </div>
     </div>
     <div class="intro-container" id="intro-container">
       <img
       src="codingShot.jpg"
       style="
-          /* height: calc(100vh - 150px); */
-          width: auto;
-          float: right;
+          width: 100vw;
           border-radius: 1em;
+          object-fit: cover;
+          margin-top:75px;
+          height: calc(100vh - 75px);
         "
         id="codingShotImg"
       />
       <div class="intro-heading">
-        <div>
           <h1>Tybe Media</h1>
           <h2 style="font-size: 36pt">
             Ihr Partner für einen modernen Webauftritt
           </h2>
-        </div>
       </div>
     </div>
     <hr/>
@@ -178,12 +191,26 @@ function scrollFunction() {
     <div>
       <hr />
       <br />
-      <h1 id="contact">Interesse geweckt?</h1>
-      <div>
-        <h2>Melde dich gerne bei Uns <br><br>
-      +49 1515 4738083
-        Oder
-        <a href="mailto:info@tybe-media.com">info@tybe-media.com</a> </h2>
+      <h1 id="contact" style="margin-left: 1em">Interesse geweckt?</h1>
+      <div class="interested-container">
+        <div style=" width: 100%">
+          <form class="contact-form">
+            <input type="text" placeholder="Vorname" id="firstname"/>
+            <input type="text" placeholder="Nachname" id="lastname"/>
+            <input type="text" placeholder="Email" id="mail"/>
+            <input type="text" placeholder="Telefon" id="phone"/>
+            <input type="text" placeholder="Betreff" id="subject">
+            <textarea placeholder="Ihre Nachricht" id="message"></textarea>
+            <input type="button" class="primary-button" value="Send Email" 
+            onclick="sendEmail()" />
+          </form>
+        </div>
+        <div >
+          <h2>Melde dich gerne bei Uns <br><br>
+            <a href="tel:+491515 4738083">+49 1515 4738083</a>
+          Oder
+          <a href="mailto:info@tybe-media.com">info@tybe-media.com</a> </h2>
+        </div>
       </div>
     </div>
   </body>
@@ -211,4 +238,5 @@ function scrollFunction() {
       <h2 style="margin-bottom: 0.15em;"><a href="./impress.html"> Impressum</a></h2>
     </div>
   </footer>
+
 </html>
