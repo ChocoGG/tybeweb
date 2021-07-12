@@ -67,3 +67,10 @@ ul {
     cursor: pointer;
     color: white;
     }
+
+    @media screen and (max-width: 950px) {
+.triple-container{
+    flex-direction: column;
+    align-items: center;
+}
+    }
