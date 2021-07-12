@@ -30,6 +30,8 @@
 emailjs.send('service_pwkxoon', 'template_swvdnbn', templateParams)
     .then(function(response) {
        console.log('SUCCESS!', response.status, response.text);
+       document.getElementById("sendMailButton").disabled = true;
+       document.getElementById("sendMailButton").style.background = "#cccccc"
     }, function(error) {
        console.log('FAILED...', error);
     });
@@ -54,13 +56,14 @@ function myFunction() {
    
     <!-- nav-bar -->
     <div class="topnav" id="myTopnav">
-         <img src="logo.png" id="logo" style="width: 75px;height: 75px; float: left; margin-right: 1em" />
+      <a href="#home" class="active"><img src="logo.png" id="logo" style="width: 75px;height: 75px; float: left; margin-right: 1em" /></a>
       <div>
         <a href="#home" class="active">Start</a>
         <a href="#aboutMe">Über mich</a>
         <a href="#services">Services</a>
         <a href="#projects">Projekte</a>
         <a href="#contact">Kontakt</a>
+        <a href="./impress.html" style="font-size: 16pt; align-self: center;">AGB / Impressum</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i><svg height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></i>
         </a>
@@ -76,7 +79,7 @@ function myFunction() {
           margin-top:75px;
           height: calc(100vh - 75px);
         "
-        id="codingShotImg"
+        id="home"
       />
       <div class="intro-heading">
           <h1>Tybe Media</h1>
@@ -158,20 +161,11 @@ function myFunction() {
     <!-- Projects -->
     <hr /><br>
     <h1 id="projects">Projekte Portfolio</h1>
-    <div style="display: flex; justify-content: space-between">
-      <div class="project-card border-shadow" style="width: 50%">
+    <div class="project-container">
+      <!-- Koinzer Altbau -->
+      <div class="project-card border-shadow">
         <h1>Koinzer Altbausanierung</h1>
-        <div
-          style="
-            border: solid white 12px;
-            height: 300px;
-            width: 81vw;
-            max-width: 611px;
-            border-radius: 30px;
-          "
-        >
-          <img src="mtqGkiXuRh (3).gif" style="height: auto; width: 80vw;max-width: 611px; align-self: center;" />
-          </div>
+          <img src="./images/KoinzerScreen1.JPG" />
           <div style="margin-top: 1em; text-align:start;">
           Handwerksbetrieb aus Norddeutschland
           <span style="font-weight: bold;">Anforderungen</span>
@@ -182,7 +176,37 @@ function myFunction() {
             <li>Unternehmen auf Google & Google Maps einbinden</li>
           </ul> 
           </div>
-          <a href="https://bautalent.de"><h2 style="text-align: center;">-> Selber überzeugen <-</h2></a>
+          <a href="https://bautalent.de" target="_blank"><h2 style="text-align: center;">-> Selber überzeugen <-</h2></a>
+        </div>
+        <!-- Supercar24 -->
+      <div class="project-card border-shadow">
+        <h1>Supercar24</h1>
+          <img src="./images/SupercarRent24Screen1.JPG" />
+          <div style="margin-top: 1em; text-align:start;">
+          Beispielseite einer Autovermietung
+          <span style="font-weight: bold;">Anforderungen</span>
+          <ul style="margin-top: 0;">
+            <li>Buchungsanfrage</li>
+            <li>Flottendarstellung in Gallerie</li>
+            <li>Tätigkeitsbeschreibungen</li>
+          </ul> 
+          </div>
+          <a href="/Beispiel24/index.html" target="_blank"><h2 style="text-align: center;">-> Selber überzeugen <-</h2></a>
+        </div>
+        <!-- Julia Mittmann Landingpage -->
+      <div class="project-card border-shadow">
+        <h1>Julia Mittmann Landingpage</h1>
+          <img src="./images/JuliaMittmannScreen1.JPG"  />
+          <div style="margin-top: 1em; text-align:start;">
+          Beispielseite einer Landingpage für Network Marketer
+          <span style="font-weight: bold;">Anforderungen</span>
+          <ul style="margin-top: 0;">
+            <li>Künstlerischer Stil</li>
+            <li>Helles, freundliches Design</li>
+            <li>Formular zum kontaktieren</li>
+          </ul> 
+          </div>
+          <a href="/ExampleLandingpage/index.html" target="_blank"><h2 style="text-align: center;">-> Selber überzeugen <-</h2></a>
         </div>
       </div>
     </div>
@@ -195,14 +219,14 @@ function myFunction() {
       <div class="interested-container">
         <div style=" width: 100%">
           <form class="contact-form">
-            <input type="text" placeholder="Vorname" id="firstname"/>
-            <input type="text" placeholder="Nachname" id="lastname"/>
-            <input type="text" placeholder="Email" id="mail"/>
-            <input type="text" placeholder="Telefon" id="phone"/>
-            <input type="text" placeholder="Betreff" id="subject">
-            <textarea placeholder="Ihre Nachricht" id="message"></textarea>
+            <input type="text" placeholder="Vorname" id="firstname" autocomplete="off"/>
+            <input type="text" placeholder="Nachname" id="lastname" autocomplete="off"/>
+            <input type="text" placeholder="Email" id="mail" autocomplete="off"/>
+            <input type="text" placeholder="Telefon" id="phone" autocomplete="off"/>
+            <input type="text" placeholder="Betreff" id="subject" autocomplete="off">
+            <textarea placeholder="Ihre Nachricht" id="message" autocomplete="off"></textarea>
             <input type="button" class="primary-button" value="Send Email" 
-            onclick="sendEmail()" />
+            onclick="sendEmail()" id="sendMailButton" />
           </form>
         </div>
         <div >
@@ -225,9 +249,9 @@ function myFunction() {
   >
     <div>
       <h2 style="margin-bottom: 0">Info</h2>
-      Tybe Media | Timo Beyer<br />
-      +49 1515 4738083<br />
-      info@tybe-media.com<br />
+      Tybe Media | Timo r<br />
+      <a href="tel:+491515 4738083">+49 1515 4738083</a><br />
+      <a href="mailto:info@tybe-media.com">info@tybe-media.com</a><br />
     </div>
     <div>
       <h2 style="margin-bottom: 0.15em;">Social Media</h2>
