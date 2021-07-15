@@ -83,7 +83,7 @@ a {
   width: calc(50% - 4em);
   margin: 1em;
   font-size: 16pt;
-  height: 100vh;
+  height: 80vh;
   max-height: 900px;
   display: flex;
   justify-content: center;
@@ -103,29 +103,41 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.project-container a {
+  max-width: calc(100% / 4 - 2px);
+}
+.project-container a img {
+  max-width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border: solid #b8b8b8 1px;
+  cursor: pointer;
+}
 
 .border-shadow {
   box-shadow: 0 2px 1px -1px #646464, 0 1px 1px 0 #646464, 0 1px 3px 0 #646464;
 }
 
+.service-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+  padding: 1em;
+}
+
 .services {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .services > div {
-  height: 250px;
-  width: 20%;
+  width: calc(100% / 2 - 6em);
+  margin: 1em;
   text-align: center;
   border: solid white 1px;
   padding: 1em;
   border-radius: 0 25px;
-}
-
-.blueprint {
-  background-color: #06c;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.2) 2px, transparent 2px), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 2px, transparent 1px), linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }
 
 /* Add a black background color to the top navigation */
@@ -133,15 +145,14 @@ a {
   overflow: hidden;
   display: flex;
   align-items: center;
+  background: black;
   position: fixed;
   /* Set the navbar to fixed position */
   top: 0;
   /* Position the navbar at the top of the page */
   width: 100%;
   /* Full width */
-  background: black;
   z-index: 3;
-  border-bottom: solid #444444 1px;
   justify-content: space-between;
 }
 .topnav div {
@@ -153,12 +164,12 @@ a {
 .topnav a {
   float: left;
   display: block;
-  font-family: "Bebas Neue", cursive;
   color: #f2f2f2;
   text-align: center;
+  font-weight: bold;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 28pt;
+  font-size: 14pt;
   margin-right: 1em;
 }
 
@@ -185,6 +196,9 @@ input, textarea {
 .contact-form input, .contact-form textarea {
   margin: 1em;
   width: calc(100% / 2 - 2em);
+  background: black;
+  color: white;
+  border: groove white 1px;
 }
 
 /* Add an active class to highlight the current page */
@@ -293,13 +307,6 @@ input, textarea {
 
   .project-card {
     width: 100% !important;
-  }
-
-  .blueprint img:first-child {
-    width: 19%;
-  }
-  .blueprint img:last-child {
-    width: 60%;
   }
 
   footer {

@@ -56,14 +56,16 @@ function myFunction() {
    
     <!-- nav-bar -->
     <div class="topnav" id="myTopnav">
-      <a href="#home" class="active"><img src="logo.png" id="logo" style="width: 75px;height: 75px; float: left; margin-right: 1em" /></a>
+      <a href="#home">
+<img src="logo.png" id="logo" style="width: 75px;height: 75px; float: left; margin-right: 1em" />
+      </a>
       <div>
-        <a href="#home" class="active">Start</a>
+        <a href="#home">Start</a>
         <a href="#aboutMe">Über mich</a>
         <a href="#services">Services</a>
         <a href="#projects">Projekte</a>
         <a href="#contact">Kontakt</a>
-        <a href="./impress.html" style="font-size: 16pt; align-self: center;">AGB / Impressum</a>
+        <a href="./impress.html" style="align-self: center;">AGB / Impressum</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i><svg height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></i>
         </a>
@@ -108,25 +110,29 @@ function myFunction() {
       </div>
     </div>
     <!-- Services -->
-    <hr style="content: 't'"/>
-    <h1 id="services">Services</h1>
-    <div class="services" style="margin-bottom: 1em;">
-    <div>
+    <hr/>
+    <div class="service-container">
+      <div style="width: 30%;padding: 1em;" id="services">
+        <h1>Services</h1>
+        <h2>Our Services</h2>
+      </div>
+    <div class="services" style="margin-bottom: 1em;width: 70%;">
+    <div style="background: black;">
       <h1>Webdesign🎨</h1>
         # Modern 
         # Responsive
         # Frei nach Wunsch #
         <p>Ihr Projekt wird nach den neuesten Standarts umgesetzt und ist auf allen gängigen Geräten schön zu benutzen, Ihren Wünschen sind dabei keine Grenzen gesetzt</p>
     </div>
-    <div class="blueprint" >
-            <h1 style=" text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;">Logo & Grafikdesign</h1>
-                  <div style="background: black;color:white;width: 100%;padding: 0.25em;">Sie haben noch kein Logo? Kein Problem, dafür haben wir Experten!</div><br>
+    <div style="background: white;color: black; border: solid black 1px">
+            <h1 >Logo & Grafikdesign</h1>
+                  <div style="width: 100%;padding: 0.25em;">Sie haben noch kein Logo? Kein Problem, dafür haben wir Experten!</div><br>
         <div style="display: flex; align-items: center; justify-content: space-around;width: 100%;">
           <img src="./logo.png" width="30%" ></object>
           <img src="./images/SecondLogo.png" width="55%" ></object>
         </div>
     </div>
-    <div style="background: white; color: black">
+    <div style="background: white; color: black;  border: solid black 1px">
       <h1 style="font-weight: 1500;">
         <span style="color: #4285f4">G</span>
         <span style="color: #ea4335">o</span>
@@ -142,7 +148,7 @@ function myFunction() {
         <div><img src="./images/searchSmall.png"></div>
         Wir kümmern uns darum, dass Ihre Internetpräsenz gut zu finden ist und Sie dadurch ihren Kundenkreis erweitern können.
       </div>
-      <div style="display: flex; justify-content: space-around;margin-top: 0.25em">
+      <div style="display: flex; justify-content: space-around;margin-top: 0.25em;">
         <div style="    box-shadow: 0 1px 1px rgba(0,0,0,.1);
         background-color: #f8f9fa;
         border: 1px solid #dadce0;
@@ -153,70 +159,38 @@ function myFunction() {
         color: #202124; padding: 0.25em">Auf gut Glück!</div>
       </div>
     </div>
-    <div>
+    <div style="background: black;">
       <h1>Hosting & Support🚀</h1>
       Gerne kümmern wir uns bei Bedarf darum, dass ihre Webseite auf einem hochverfügbaren Server gehostet wird und bieten auch nach Abschluss des Projektes Support nach Ihren Wünschen an. 
     </div>
-    </div>
+    </div></div>
     <!-- Projects -->
     <hr /><br>
-    <h1 id="projects">Projekte Portfolio</h1>
-    <div class="project-container">
-      <!-- Koinzer Altbau -->
-      <div class="project-card border-shadow">
-        <h1>Koinzer Altbausanierung</h1>
-          <img src="./images/KoinzerScreen1.JPG" />
-          <div style="margin-top: 1em; text-align:start;">
-          Handwerksbetrieb aus Norddeutschland
-          <span style="font-weight: bold;">Anforderungen</span>
-          <ul style="margin-top: 0;">
-            <li>Minimalistisch</li>
-            <li>Viele Bilder</li>
-            <li>Tätigkeitsbeschreibungen</li>
-            <li>Unternehmen auf Google & Google Maps einbinden</li>
-          </ul> 
-          </div>
-          <a href="https://bautalent.de" target="_blank"><h2 style="text-align: center;">-> Selber überzeugen <-</h2></a>
-        </div>
-        <!-- Supercar24 -->
-      <div class="project-card border-shadow">
-        <h1>Supercar24</h1>
-          <img src="./images/SupercarRent24Screen1.JPG" />
-          <div style="margin-top: 1em; text-align:start;">
-          Beispielseite einer Autovermietung
-          <span style="font-weight: bold;">Anforderungen</span>
-          <ul style="margin-top: 0;">
-            <li>Buchungsanfrage</li>
-            <li>Flottendarstellung in Gallerie</li>
-            <li>Tätigkeitsbeschreibungen</li>
-          </ul> 
-          </div>
-          <a href="/Beispiel24/index.html" target="_blank"><h2 style="text-align: center;">-> Selber überzeugen <-</h2></a>
-        </div>
-        <!-- Julia Mittmann Landingpage -->
-      <div class="project-card border-shadow">
-        <h1>Julia Mittmann Landingpage</h1>
-          <img src="./images/JuliaMittmannScreen1.JPG"  />
-          <div style="margin-top: 1em; text-align:start;">
-          Beispielseite einer Landingpage für Network Marketer
-          <span style="font-weight: bold;">Anforderungen</span>
-          <ul style="margin-top: 0;">
-            <li>Künstlerischer Stil</li>
-            <li>Helles, freundliches Design</li>
-            <li>Formular zum kontaktieren</li>
-          </ul> 
-          </div>
-          <a href="/ExampleLandingpage/index.html" target="_blank"><h2 style="text-align: center;">-> Selber überzeugen <-</h2></a>
-        </div>
+    <div style="display: flex; justify-content: space-between;">
+      <div style="width: 30%;padding: 1em">
+        <h1 id="projects">Portfolio</h1>
+        Get inspired by previous work<br>
+      </div>
+      <div class="project-container" style="width: 70%;">
+      <a href="https://bautalent.de/" target="_blank"><img src="images/koinzerLogo.jpg"></a>
+      <a href="http://logodesign-tjorben.de/" target="_blan"><img src="images/logodesignLogo.jpg"></a>
+      <a href="./ExampleLandingpage/index.html" target="_blank"><img src="https://images.unsplash.com/photo-1540651543739-edbf37b60845?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"></a>
+      <a href="./Beispiel24/index.html" target="_blank"><img src="images/supercar24Logo.JPG"></a>
       </div>
     </div>
-    <div></div>
+
+   </div>
     <!-- Contact -->
     <div>
       <hr />
       <br />
-      <h1 id="contact" style="margin-left: 1em">Interesse geweckt?</h1>
+      <h1 id="contact" style="margin-left: 1em">Get in Touch</h1>
       <div class="interested-container">
+        <div style="font-size: 20pt;width: 30%;">
+            <a href="tel:+491515 4738083">+49 1515 4738083</a><br>
+          
+          <a href="mailto:info@tybe-media.com">info@tybe-media.com</a> </h2>
+        </div>
         <div style=" width: 100%">
           <form class="contact-form">
             <input type="text" placeholder="Vorname" id="firstname" autocomplete="off"/>
@@ -229,12 +203,7 @@ function myFunction() {
             onclick="sendEmail()" id="sendMailButton" />
           </form>
         </div>
-        <div >
-          <h2>Melde dich gerne bei Uns <br><br>
-            <a href="tel:+491515 4738083">+49 1515 4738083</a>
-          Oder
-          <a href="mailto:info@tybe-media.com">info@tybe-media.com</a> </h2>
-        </div>
+
       </div>
     </div>
   </body>
