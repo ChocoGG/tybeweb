@@ -279,6 +279,7 @@ input, textarea {
 .c30-70 {
   display: flex;
   justify-content: space-between;
+  width: 99%;
 }
 
 @media screen and (max-width: 850px) {

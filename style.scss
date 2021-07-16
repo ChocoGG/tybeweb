@@ -85,6 +85,7 @@ max-height: 900px;
 display: flex;
 justify-content: center;
 flex-direction: column;
+
 img{
   height: auto; 
   width: 100%;
@@ -258,6 +259,8 @@ input, textarea{
 
 .c30-70{
   display: flex; justify-content: space-between;
+  width: 99%;
+
 }
 
 @media screen and (max-width: 850px) {
@@ -278,7 +281,6 @@ input, textarea{
       text-align: center;
     }
     flex-direction: column;
-
   }
 .services div{
   width: 100%;
