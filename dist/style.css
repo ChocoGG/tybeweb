@@ -290,11 +290,12 @@ input, textarea {
     width: 100%;
   }
 
-  .interested-container {
+  .service-container, .interested-container {
     flex-direction: column;
   }
-  .interested-container div::after {
-    content: "____________";
+  .service-container div, .interested-container div {
+    width: 100% !important;
+    text-align: center;
   }
 
   .services div {

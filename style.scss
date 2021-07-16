@@ -268,11 +268,13 @@ input, textarea{
       width: 100%;
     }
   }
-  .interested-container{
-    flex-direction: column;
-    div::after{
-      content: "____________"
+  .service-container, .interested-container{
+    div{
+      width: 100% !important;
+      text-align: center;
     }
+    flex-direction: column;
+
   }
 .services div{
   width: 100%;
