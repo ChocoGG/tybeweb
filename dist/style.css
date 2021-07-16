@@ -119,9 +119,6 @@ a {
 }
 
 .service-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
   background-image: url("https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
   padding: 1em;
 }
@@ -213,12 +210,6 @@ input, textarea {
   display: none;
 }
 
-.interested-container {
-  display: flex;
-  margin: 1em;
-  justify-content: space-between;
-}
-
 .aboutMe {
   display: flex;
   justify-content: space-around;
@@ -285,15 +276,25 @@ input, textarea {
     width: 100% o !important;
   }
 }
+.c30-70 {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 850px) {
   .contact-form input, .contact-form textarea {
     width: 100%;
   }
 
-  .service-container, .interested-container {
+  .project-container a, .project-container img {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .c30-70 {
     flex-direction: column;
   }
-  .service-container div, .interested-container div {
+  .c30-70 div {
     width: 100% !important;
     text-align: center;
   }
