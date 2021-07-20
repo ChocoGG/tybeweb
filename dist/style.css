@@ -18,6 +18,7 @@ html, body {
   width: 100vw;
   border-radius: 1em;
   object-fit: cover;
+  object-position: left;
   margin-top: 75px;
   height: calc(100vh - 75px);
   animation: zoominoutsinglefeatured 5s;
