@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/style.css" />
+    <title>Tybe Media</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Nav -->
+    <div class="nav">
+      <a href="index.html"><img src="../logo.png" alt="Tybe Media" style="z-index: 3" /></a>
+      <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <!-- Welcome Container -->
+    <div class="welcome-container">
+      <div id="wc-main">
+        <h2>Tybe Media, or in other words</h2>
+        <h1 class="shine-test">Web done right.</h1>
+        <h2>
+          As the importance of online presence increases day by day, we want to accomplish projects that are just as unique as the people we work with.
+          Whether it's a personal website or a complex web-app, together with our Partners we fullfill your creative dream in Time and by modern standards.
+          
+        </h2>
+        <div id="wc-button"><span><a href="#projects">See Projects</a></span></div>
+      </div>
+      <img src="../CutoutMe.png" />
+    </div>
+    <div class="about-container">
+      <img src="https://images.unsplash.com/photo-1527237545644-c3d2a74ede9f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" />
+
+      <div id="about">
+        <h1 class="sub-heading" style="margin: 0">About</h1>
+        <h2>
+          I'm Timo Beyer, I develop Websites, Games and general Software.<br />
+          I learned a lot during my Vocational Training as a Fullstack
+          Developer, still I had my biggest realization with the fact that there
+          is no space to express creativity in the way I define the art of
+          software developing. Therefor I founded this company, with the goal of
+          creating unique software for unique people and projects.
+        </h2>
+        <div style="width: 100%">
+          <div class="timeline-view">
+            <span>11.2018 - 06.2021</span>
+            <span>Ausbildung zum Fullstack Entwickler</span>
+          </div>
+          <div class="timeline-view">
+            <span>02.2021</span>
+            <span>Erstes Kundenprojekt</span>
+          </div>
+          <div class="timeline-view">
+            <span>01.04.2021</span>
+            <span>Gründung Tybe Media</span>
+          </div>
+          <div class="timeline-view">
+            <span>23.06.2021</span>
+            <span>Vollzeit Selbstständigkeit</span>
+          </div>
+        </div>
+        <!-- <div class="gauge-view">
+          <span> 5 </span>
+          <span> Projects </span>
+        </div> -->
+      </div>
+    </div>
+    <!-- Projects -->
+    <h1 class="sub-heading">Projects</h1>
+    <div class="projects-container" id="projects">  
+      <div>
+        <img src="./Bautalent-Preview.png" alt="" />
+        <h2>Koinzer Altbausanierung</h2>
+        <h3>Webdesign & Google SEO</h3>
+      </div>
+      <div>
+        <img src="Logodesign-Preview.png" alt="" />
+        <h2>Tjorben Logodesign</h2>
+        <h3>Webdesign</h3>
+      </div>
+      <div>
+        <img src="ComingSoon.png" alt="" />
+        <h2>Nina Goretzki Personal Landingpage</h2>
+        <h3>Webdesign</h3>
+      </div>
+      <div>
+        <img src="ComingSoon.png" alt="" />
+        <h2>Sarah Trettin Personal Landingpage</h2>
+        <h3>Webdesign</h3>
+      </div>
+    </div>
+    <!-- Contact -->
+    <h1 class="sub-heading" id="contact">Let's Work together</h1>
+    <div class="contact-container">
+      <div style="width: 100%">
+        <!-- Contact Methods -->
+        <div class="socials">
+          <a href="https://www.instagram.com/tybemedia/" target="_blank">
+            <img src="instagram-icon.webp" />
+            <span>Instagram</span></a
+          >
+          <a href="https://wa.me/message/BS7POIV7DNAOH1" target="_blank">
+            <img src="whatsapp-icon.png" />
+            <span>Whatsapp</span></a
+          >
+          <a href="tel:+49 1515 4738083"> <img src="phone.png" /><span> Phone</span></a>
+          <a href="mailto:info@tybe-media.com"><img src="mail.png"><span>Mail</span></img></a>
+        </div>
+        <!-- Form -->
+
+        <form class="contact-form" id="contact-form">
+          <input type="text" placeholder="Name" id="name" autocomplete="off" />
+          <input
+            type="text"
+            placeholder="Email"
+            id="mail"
+            autocomplete="off"
+            required
+          />
+          <textarea
+            placeholder="Ihre Nachricht"
+            id="message"
+            autocomplete="off"
+            required
+          ></textarea>
+          <input
+            type="submit"
+            class="primary-button"
+            value="Send Message"
+            onclick="sendEmail()"
+            id="sendMailButton"
+          />
+        </form>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1533578662531-a74302974c72?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG1hbiUyMHNpdHRpbmclMjBpbiUyMGRhcmt8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+      />
+    </div>
+    <footer>
+      <div>
+        <span>©2021 Tybe Media by Timo Beyer</span>
+        <span>Contact</span>
+        <span>Impress</span>
+      </div>
+    </footer>
+  </body>
+</html>
