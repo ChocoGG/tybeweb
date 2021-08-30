@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/style.css" />
+    <title>Tybe Media</title>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+</script>
+    <script type="text/javascript">
+       emailjs.init("user_SGnVUcBXkp3FtaIz8RMoo");
+  function sendEmail() {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    let firstname = document.getElementById("firstname").value;
+    let lastname = document.getElementById("lastname").value;
+    let mail = document.getElementById("mail").value;
+    let phone = document.getElementById("phone").value;
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("message").value;
+
+    
+    var templateParams = {
+    firstname: firstname,
+    lastname: lastname,
+    mail: mail,
+    phone: phone,
+    subject: subject,
+    message: message
+};
+if(re.test(String(mail).toLowerCase()) && message != ''){
+  emailjs.send('service_pwkxoon', 'template_swvdnbn', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+       document.getElementById("sendMailButton").disabled = true;
+       document.getElementById("sendMailButton").style.background = "#cccccc"
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+}
+    }
+    </script>
+    <script>
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+    document.getElementById("logo").style.display = "none";
+  } else {
+    x.className = "topnav";
+    document.getElementById("logo").style.display = "block";
+  }
+} 
+    </script>
+  </head>
+
+  <body style="background: black">
+   
+    <!-- nav-bar -->
+    <div class="topnav" id="myTopnav">
+      <a href="#home">
+<img src="logo.png" id="logo" style="width: 75px;height: 75px; float: left; margin-right: 1em" />
+      </a>
+      <div>
+        <a href="#home">Start</a>
+        <a href="#aboutMe">Über mich</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projekte</a>
+        <a href="#contact">Kontakt</a>
+        <a href="./impress.html" style="align-self: center;">AGB / Impressum</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i><svg height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></i>
+        </a>
+      </div>
+    </div>
+    <div class="intro-container" id="intro-container">
+      <img
+      src="codingShot.jpg"
+
+        id="home"
+      />
+      <div class="intro-heading">
+          <h1>Tybe Media</h1>
+          <h2 style="font-size: 36pt">
+            Ihr Partner für einen modernen Webauftritt
+          </h2>
+      </div>
+    </div>
+    <hr/>
+    <!-- About me -->
+    <div style="margin: 1em;z-index: 5;background: black;position: relative;">
+      <h1 id="aboutMe">Über mich</h1>
+      <div class="aboutMe" >
+        <img src="./CutoutMe.png" style="width: 80vw;max-width: 600px; height: auto;align-self: center;    animation: opacityFade 5s;";/>
+          <div style="text-align: center;">
+            <h1 style="margin: 0">Ich bin Timo</h1>
+            <h2>Webdesigner & Programmierer</h2>
+            <div style="font-size: 18pt">
+              <span class="dot"></span> Ausbildung zum Fullstack Entwickler
+              11.2018 - 06.2021<br />
+              <span class="dot"></span> Erstes eigenes Kundenprojekt 02.2021<br />
+              <span class="dot"></span> Gründung Tybe Media 01.04.2021
+            </div>
+            <span style="font-size: 92pt;"><></span>
+          </div>
+      </div>
+    </div>
+    <!-- Services -->
+    <hr/>
+    <div class="c30-70 service-container">
+      <div style="width: 30%;padding: 1em;" id="services">
+        <h1>Services</h1>
+      </div>
+    <div class="services" style="margin-bottom: 1em;width: 70%;">
+    <div style="background: black;">
+      <h1>Webdesign🎨</h1>
+        # Modern 
+        # Responsive
+        # Frei nach Wunsch #
+        <p>Ihr Projekt wird nach den neuesten Standarts umgesetzt und ist auf allen gängigen Geräten schön zu benutzen, Ihren Wünschen sind dabei keine Grenzen gesetzt</p>
+    </div>
+    <div style="background: white;color: black; border: solid black 1px">
+            <h1 >Logo & Grafikdesign</h1>
+                  <div style="width: 100%;padding: 0.25em;">Sie haben noch kein Logo? Kein Problem, dafür haben wir Experten!</div><br>
+        <div style="display: flex; align-items: center; justify-content: space-around;width: 100%;">
+          <img src="./logo.png" width="30%" ></object>
+          <img src="./images/SecondLogo.png" width="55%" ></object>
+        </div>
+    </div>
+    <div style="background: white; color: black;  border: solid black 1px">
+      <h1 style="font-weight: 1500;">
+        <span style="color: #4285f4">G</span>
+        <span style="color: #ea4335">o</span>
+        <span style="color: #fbbc05">o</span>
+        <span style="color: #4285f4">g</span>
+        <span style="color: #34a853">l</span>
+        <span style="color: #ea4335">e </span> 
+        <span style="color: #4285f4">S</span> 
+        <span style="color: #34a853">E</span> 
+        <span style="color: #ea4335">O</span> 
+      </h1>
+      <div style="padding: 0.5em; border: 1px solid #dfe1e5; border-radius: 24px; width: 90%;display: flex; justify-content: space-between;align-items: center;">
+        <div><img src="./images/searchSmall.png"></div>
+        Wir kümmern uns darum, dass Ihre Internetpräsenz gut zu finden ist und Sie dadurch ihren Kundenkreis erweitern können.
+      </div>
+      <div style="display: flex; justify-content: space-around;margin-top: 0.25em;">
+        <div style="    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+        background-color: #f8f9fa;
+        border: 1px solid #dadce0;
+        color: #202124;padding: 0.25em">Tybe Media</div>
+        <div style="box-shadow: 0 1px 1px rgba(0,0,0,.1);
+        background-color: #f8f9fa;
+        border: 1px solid #dadce0;
+        color: #202124; padding: 0.25em">Auf gut Glück!</div>
+      </div>
+    </div>
+    <div style="background: black;">
+      <h1>Hosting & Support🚀</h1>
+      Gerne kümmern wir uns bei Bedarf darum, dass ihre Webseite auf einem hochverfügbaren Server gehostet wird und bieten auch nach Abschluss des Projektes Support nach Ihren Wünschen an. 
+    </div>
+    </div></div>
+    <!-- Projects -->
+    <hr /><br>
+    <div class="c30-70">
+      <div style="width: 30%;padding: 1em">
+        <h1 id="projects">Portfolio</h1>
+       <h2> Überzeuge dich von unseren bisherigen Projekten<br></h2>
+      </div>
+      <div class="project-container" style="width: 70%;">
+      <a href="https://bautalent.de/" target="_blank"><img src="images/koinzerLogo.jpg"></a>
+      <a href="http://logodesign-tjorben.de/" target="_blan"><img src="images/logodesignLogo.jpg"></a>
+      <a href="./ExampleLandingpage/index.html" target="_blank"><img src="https://images.unsplash.com/photo-1540651543739-edbf37b60845?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"></a>
+      <a href="./Beispiel24/index.html" target="_blank"><img src="images/supercar24Logo.JPG"></a>
+      </div>
+    </div>
+
+   </div>
+    <!-- Contact -->
+    <div style="margin-left: 1em">
+      <hr />
+      <br />
+      <h1 id="contact" >Get in Touch</h1>
+      <div class="c30-70">
+        <div style="font-size: 20pt;width: 30%;">
+            <a href="tel:+491515 4738083">+49 1515 4738083</a><br>
+          
+          <a href="mailto:info@tybe-media.com">info@tybe-media.com</a> </h2><br>
+        </div>
+        <div style=" width: 100%">
+          <form class="contact-form" id="contact-form">
+            <input type="text" placeholder="Vorname" id="firstname" autocomplete="off"/>
+            <input type="text" placeholder="Nachname" id="lastname" autocomplete="off"/>
+            <input type="text" placeholder="Email" id="mail" autocomplete="off" required/>
+            <input type="text" placeholder="Telefon" id="phone" autocomplete="off"/>
+            <input type="text" placeholder="Betreff" id="subject" autocomplete="off" required>
+            <textarea placeholder="Ihre Nachricht" id="message" autocomplete="off" required></textarea>
+            <input type="submit" class="primary-button" value="Send Email" 
+            onclick="sendEmail()" id="sendMailButton"/>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </body>
+  <!-- Footer -->
+  <footer
+  >
+    <div>
+      <h2 style="margin-bottom: 0">Info</h2>
+      Tybe Media | Timo Beyer<br />
+      <a href="tel:+491515 4738083">+49 1515 4738083</a><br />
+      <a href="mailto:info@tybe-media.com">info@tybe-media.com</a><br />
+    </div>
+    <div>
+      <h2 style="margin-bottom: 0.15em;">Social Media</h2>
+      <a href="https://www.instagram.com/tybemedia/" target="_blank"
+        >Instagram</a><br>
+    </div>
+    <div>
+      <h2 style="margin-bottom: 0.15em;"><a href="./impress.html"> Impressum</a></h2>
+    </div>
+  </footer>
+
+</html>
