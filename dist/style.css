@@ -284,4 +284,23 @@ footer div {
   .socials a {
     width: 100% !important;
   }
+
+  .welcome-container {
+    flex-direction: column;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 0;
+  }
+  .welcome-container div {
+    width: 100% !important;
+    height: 100%;
+  }
+
+  .about-container {
+    margin-top: 100vh;
+  }
+
+  .projects-container a {
+    width: calc(100% / 2 - 2em);
+  }
 }
