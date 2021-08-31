@@ -18,6 +18,7 @@ a{
 .nav{
     animation: slideInFromTop 1s 1;
     display: flex;
+    overflow: hidden;
     position: fixed; 
     width: 100%;
     background: black;
@@ -31,10 +32,19 @@ a{
     div{
         a{
             margin: 1em;
+            color: rgb(200, 200, 200);
         }
     }
     img{
         height:100px;
+    }
+    .icon{
+        display: none;
+     margin-right: 1em;
+    }
+    a:hover{
+text-decoration: overline;
+color: rgb(255, 255, 255);
     }
 }
 .welcome-container{
@@ -212,6 +222,86 @@ footer{
     padding: 2em;
     }
 }
+
+// Media Queries
+@media screen and (max-width: 1150px) {
+    .welcome-container{
+            //  Margin cuz Nav-Bar and fixed height of 'see projects' button
+    margin-top: calc(100px + 1em + 200px);
+    }
+.projects-container div{
+    width: calc(100% / 2 - 2em);
+}
+input, textarea{
+    width: calc(100% - 4em) !important;
+}
+.contact-container{
+    flex-direction: column;
+}
+.about-container {
+    > div{
+        width: 100%;
+    }
+    img{
+        display: none;
+    }
+}
+}
+@media screen and (max-width: 715px) {
+    .nav a:not(#logo, .icon) {display: none;}
+    .nav a.icon {
+      float: right;
+      display: block;
+    }
+    .nav.responsive {
+        animation: slideInFromRight 1s 1;
+        position: fixed;
+        flex-direction: column;
+        background: black;
+        width: 100%;
+        height: 100%;
+        div{
+          flex-direction: column;
+          position: inherit;
+          margin-top: 110px;
+          a{
+            font-size: 28pt !important;
+            display: block;
+                    }
+        }
+    }
+    .nav.responsive .icon {
+        margin: 2em;
+    }
+    .nav.responsive a {
+      float: none;
+      display: block !important;
+      text-align: left;
+      text-align: center;
+    }
+.socials a{
+    width: 100% !important;
+}
+.welcome-container{
+    flex-direction: column;
+    width: 80%;
+    margin-left: 10%;
+    h1{
+        font-size: 48pt;
+    }
+    div{
+        width: 100% !important;
+        height: 100%;
+    }
+    margin-top: 125px;
+}
+.projects-container{
+    a{
+        width: calc(100% / 2 - 2em) ;
+    }
+}
+}
+
 @keyframes opacityFade{
     0%{
         opacity: 0;
@@ -243,48 +333,4 @@ footer{
     100% {
         transform: translateX(0);
     }
-}
-// Media Queries
-@media screen and (max-width: 1150px) {
-    .welcome-container{
-            //  Margin cuz Nav-Bar and fixed height of 'see projects' button
-    margin-top: calc(100px + 1em + 200px);
-    }
-.projects-container div{
-    width: calc(100% / 2 - 2em);
-}
-input, textarea{
-    width: calc(100% - 4em) !important;
-}
-.contact-container{
-    flex-direction: column;
-}
-.about-container {
-    > div{
-        width: 100%;
-    }
-    img{
-        display: none;
-    }
-}
-}
-@media screen and (max-width: 715px) {
-.socials a{
-    width: 100% !important;
-}
-.welcome-container{
-    flex-direction: column;
-    width: 80%;
-    margin-left: 10%;
-    div{
-        width: 100% !important;
-        height: 100%;
-    }
-    margin-top: 0;
-}
-.projects-container{
-    a{
-        width: calc(100% / 2 - 2em) ;
-    }
-}
 }

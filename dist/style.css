@@ -20,6 +20,7 @@ a {
 .nav {
   animation: slideInFromTop 1s 1;
   display: flex;
+  overflow: hidden;
   position: fixed;
   width: 100%;
   background: black;
@@ -33,9 +34,18 @@ a {
 }
 .nav div a {
   margin: 1em;
+  color: #c8c8c8;
 }
 .nav img {
   height: 100px;
+}
+.nav .icon {
+  display: none;
+  margin-right: 1em;
+}
+.nav a:hover {
+  text-decoration: overline;
+  color: white;
 }
 
 .welcome-container {
@@ -223,6 +233,91 @@ footer div {
   padding: 2em;
 }
 
+@media screen and (max-width: 1150px) {
+  .welcome-container {
+    margin-top: calc(100px + 1em + 200px);
+  }
+
+  .projects-container div {
+    width: calc(100% / 2 - 2em);
+  }
+
+  input, textarea {
+    width: calc(100% - 4em) !important;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .about-container > div {
+    width: 100%;
+  }
+  .about-container img {
+    display: none;
+  }
+}
+@media screen and (max-width: 715px) {
+  .nav a:not(#logo, .icon) {
+    display: none;
+  }
+
+  .nav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .nav.responsive {
+    animation: slideInFromRight 1s 1;
+    position: fixed;
+    flex-direction: column;
+    background: black;
+    width: 100%;
+    height: 100%;
+  }
+  .nav.responsive div {
+    flex-direction: column;
+    position: inherit;
+    margin-top: 110px;
+  }
+  .nav.responsive div a {
+    font-size: 28pt !important;
+    display: block;
+  }
+
+  .nav.responsive .icon {
+    margin: 2em;
+  }
+
+  .nav.responsive a {
+    float: none;
+    display: block !important;
+    text-align: left;
+    text-align: center;
+  }
+
+  .socials a {
+    width: 100% !important;
+  }
+
+  .welcome-container {
+    flex-direction: column;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 125px;
+  }
+  .welcome-container h1 {
+    font-size: 48pt;
+  }
+  .welcome-container div {
+    width: 100% !important;
+    height: 100%;
+  }
+
+  .projects-container a {
+    width: calc(100% / 2 - 2em);
+  }
+}
 @keyframes opacityFade {
   0% {
     opacity: 0;
@@ -253,49 +348,5 @@ footer div {
   }
   100% {
     transform: translateX(0);
-  }
-}
-@media screen and (max-width: 1150px) {
-  .welcome-container {
-    margin-top: calc(100px + 1em + 200px);
-  }
-
-  .projects-container div {
-    width: calc(100% / 2 - 2em);
-  }
-
-  input, textarea {
-    width: calc(100% - 4em) !important;
-  }
-
-  .contact-container {
-    flex-direction: column;
-  }
-
-  .about-container > div {
-    width: 100%;
-  }
-  .about-container img {
-    display: none;
-  }
-}
-@media screen and (max-width: 715px) {
-  .socials a {
-    width: 100% !important;
-  }
-
-  .welcome-container {
-    flex-direction: column;
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 0;
-  }
-  .welcome-container div {
-    width: 100% !important;
-    height: 100%;
-  }
-
-  .projects-container a {
-    width: calc(100% / 2 - 2em);
   }
 }
