@@ -42,7 +42,7 @@ a{
     justify-content: space-between;
     align-items: center;
     // Full viewheight - nav height
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
     margin-top: 125px;
     img, #wc-main{
         width: 50%;
@@ -74,7 +74,6 @@ a{
         animation-delay: 1.5s;
     font-size: 18pt;
         margin: 2em;
-        height: 200px;
         span{
             padding: 1em; border: solid white 1px;
             border-radius: 15px;
@@ -82,7 +81,7 @@ a{
     }
 }
 .about-container{
-height: 100vh;
+min-height: 100vh;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -282,9 +281,6 @@ input, textarea{
         height: 100%;
     }
     margin-top: 0;
-}
-.about-container{
-    margin-top: 100vh;
 }
 .projects-container{
     a{
