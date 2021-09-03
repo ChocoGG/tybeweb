@@ -103,7 +103,7 @@ a {
   padding: 2em;
 }
 .about-container img {
-  max-height: 100vh;
+  max-height: 100vh !important;
   border-radius: 0 0 50% 0;
   width: auto;
 }
