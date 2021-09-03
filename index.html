@@ -20,6 +20,32 @@
         }
       }
       </script>
+          <script type="text/javascript">
+            emailjs.init("user_SGnVUcBXkp3FtaIz8RMoo");
+       function sendEmail() {
+         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+     
+         let name = document.getElementById("name").value;
+         let mail = document.getElementById("mail").value;
+         let message = document.getElementById("message").value;
+         
+         var templateParams = {
+         name: name,
+         mail: mail,
+         message: message
+     };
+     if(re.test(String(mail).toLowerCase()) && message != ''){
+       emailjs.send('service_pwkxoon', 'template_swvdnbn', templateParams)
+         .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            document.getElementById("sendMailButton").disabled = true;
+            document.getElementById("sendMailButton").style.background = "#cccccc"
+         }, function(error) {
+            console.log('FAILED...', error);
+         });
+     }
+         }
+         </script>
   </head>
   <body>
     <!-- Nav -->

@@ -235,6 +235,13 @@ footer div {
 }
 
 @media screen and (max-width: 1150px) {
+  .about-container > div {
+    width: 100%;
+  }
+  .about-container img {
+    display: none;
+  }
+
   .welcome-container {
     margin-top: calc(100px + 1em + 200px);
   }
@@ -250,15 +257,12 @@ footer div {
   .contact-container {
     flex-direction: column;
   }
-
-  .about-container > div {
-    width: 100%;
-  }
-  .about-container img {
-    display: none;
-  }
 }
 @media screen and (max-width: 715px) {
+  img, #wc-main {
+    width: 100% !important;
+  }
+
   .nav a:not(#logo, .icon) {
     display: none;
   }

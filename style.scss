@@ -226,6 +226,14 @@ footer{
 
 // Media Queries
 @media screen and (max-width: 1150px) {
+    .about-container {
+        > div{
+            width: 100%;
+        }
+        img{
+            display: none;
+        }
+    }
     .welcome-container{
             //  Margin cuz Nav-Bar and fixed height of 'see projects' button
     margin-top: calc(100px + 1em + 200px);
@@ -239,16 +247,11 @@ input, textarea{
 .contact-container{
     flex-direction: column;
 }
-.about-container {
-    > div{
-        width: 100%;
-    }
-    img{
-        display: none;
-    }
-}
 }
 @media screen and (max-width: 715px) {
+    img, #wc-main{
+        width: 100% !important;
+    }
     .nav a:not(#logo, .icon) {display: none;}
     .nav a.icon {
       float: right;
