@@ -19,7 +19,7 @@
           x.className = "nav";
         }
       }
-      
+
       </script>
           <script type="text/javascript">
             emailjs.init("user_SGnVUcBXkp3FtaIz8RMoo");
@@ -36,6 +36,7 @@
          message: message
      };
      if(re.test(String(mail).toLowerCase()) && message != ''){
+       console.log(name, mail, message);
        emailjs.send('service_pwkxoon', 'template_swvdnbn', templateParams)
          .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
@@ -76,10 +77,7 @@
       <img src="../CutoutMe.png" />
     </div>
     <div class="about-container">
-      <img src="Timo.png" />
-      <!-- <img src="./IMG_20210225_180326.png" /> -->
-      <!-- <img src="https://images.unsplash.com/photo-1527237545644-c3d2a74ede9f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" /> -->
-
+      <img src="codingShot.jpg" />
       <div id="about">
         <h1 class="sub-heading" style="margin: 0">About</h1>
         <h2>
@@ -116,7 +114,7 @@
     </div>
     <!-- Projects -->
     <h1 class="sub-heading">Projects</h1>
-    <div class="projects-container" id="projects">  
+    <div class="projects-container" id="projects" style="margin-bottom: 5em;">  
       <a href="https://www.bautalent.de" target="_blank">
         <img src="./Bautalent-Preview.png" alt="" />
         <h2>Koinzer Altbausanierung</h2>
@@ -138,6 +136,7 @@
         <h3>Webdesign</h3>
       </a>
     </div>
+    <hr>
     <!-- Contact -->
     <h1 class="sub-heading" id="contact">Let's Work together</h1>
     <div class="contact-container">
@@ -182,8 +181,7 @@
         </form>
       </div>
       <img
-        src="../codingShot.jpg"
-      />
+        src="Timo.png"/>
     </div>
     <footer>
       <div>

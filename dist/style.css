@@ -12,7 +12,6 @@ html, body {
   overflow-x: hidden;
 }
 
-
 a {
   text-decoration: none;
   color: inherit;
@@ -103,7 +102,7 @@ a {
   padding: 2em;
 }
 .about-container img {
-  max-height: 100vh !important;
+  max-height: 100vh;
   border-radius: 0 0 50% 0;
   width: auto;
 }
@@ -181,6 +180,8 @@ input, textarea {
 }
 .contact-container img {
   object-fit: cover;
+  object-position: top;
+  max-height: 75vh;
 }
 .contact-container .socials {
   margin: 1em;

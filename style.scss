@@ -173,6 +173,8 @@ input, textarea{
       }
       img{
           object-fit: cover;
+          object-position: top;
+          max-height: 75vh;
       }
 .socials{
     margin: 1em;
