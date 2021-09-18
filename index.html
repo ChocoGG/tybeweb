@@ -1,194 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="dist/style.css" />
-    <title>Tybe Media</title>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
-    ></script>
-    <script>
-      function myFunction() {
-        var x = document.getElementById("topnav");
-        if (x.className === "nav") {
-          x.className += " responsive";
-        } else {
-          x.className = "nav";
-        }
-      }
 
-      </script>
-          <script type="text/javascript">
-            emailjs.init("user_SGnVUcBXkp3FtaIz8RMoo");
-       function sendEmail() {
-         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-     
-         let name = document.getElementById("name").value;
-         let mail = document.getElementById("mail").value;
-         let message = document.getElementById("message").value;
-         
-         var templateParams = {
-         name: name,
-         mail: mail,
-         message: message
-     };
-     if(re.test(String(mail).toLowerCase()) && message != ''){
-       console.log(name, mail, message);
-       emailjs.send('service_pwkxoon', 'template_swvdnbn', templateParams)
-         .then(function(response) {
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="dist/style.css" />
+  <title>Tybe Media</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("topnav");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+  </script>
+  <script type="text/javascript">
+    emailjs.init("user_SGnVUcBXkp3FtaIz8RMoo");
+
+    function sendEmail() {
+      const re =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+      let name = document.getElementById("name").value;
+      let mail = document.getElementById("mail").value;
+      let message = document.getElementById("message").value;
+
+      var templateParams = {
+        name: name,
+        mail: mail,
+        message: message
+      };
+      if (re.test(String(mail).toLowerCase()) && message != '') {
+        emailjs.send('service_pwkxoon', 'template_swvdnbn', templateParams)
+          .then(function (response) {
             console.log('SUCCESS!', response.status, response.text);
             document.getElementById("sendMailButton").disabled = true;
             document.getElementById("sendMailButton").style.background = "#cccccc"
-         }, function(error) {
+          }, function (error) {
             console.log('FAILED...', error);
-         });
-     }
-         }
-         </script>
-  </head>
-  <body>
-    <!-- Nav -->
-    <div class="nav" id="topnav">
-      <a href="index.html" id="logo"><img src="../logo.png" alt="Tybe Media" style="z-index: 3" /></a>
-      <div>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i><svg height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></i>
-      </a>
+          });
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Nav -->
+  <div class="nav" id="topnav">
+    <a href="index.html" id="logo"><img src="../logo.png" alt="Tybe Media" style="z-index: 3" /></a>
+    <div>
+      <a href="#about" onclick="myFunction()">About</a>
+      <a href="#projects" onclick="myFunction()">Projects</a>
+      <a href="#contact" onclick="myFunction()">Contact</a>
     </div>
-    <!-- Welcome Container -->
-    <div class="welcome-container">
-      <div id="wc-main">
-        <h2>Tybe Media, or in other words</h2>
-        <h1 class="shine-test">Web done right.</h1>
-        <h2>
-          As the importance of online presence increases day by day, we want to accomplish projects that are just as unique as the people we work with.
-          Whether it's a personal website or a complex web-app, together with our Partners we fullfill your creative dream in Time and by modern standards.
-          
-        </h2>
-        <div id="wc-button"><span><a href="#projects">See Projects</a></span></div>
-      </div>
-      <img src="../CutoutMe.png" />
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i><svg height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff">
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" /></svg></i>
+    </a>
+  </div>
+  <!-- Welcome Container -->
+  <div class="welcome-container">
+    <div id="wc-main">
+      <h2>Tybe Media, or in other words</h2>
+      <h1 class="shine-test">Web done right.</h1>
+      <h2>
+        As the importance of online presence increases day by day, we want to accomplish projects that are just as
+        unique as the people we work with.
+        Whether it's a personal website or a complex web-app, together with our Partners we fullfill your creative dream
+        in Time and by modern standards.
+
+      </h2>
+      <div id="wc-button"><span><a href="#projects">See Projects</a></span></div>
     </div>
-    <div class="about-container">
-      <img src="codingShot.jpg" />
-      <div id="about">
-        <h1 class="sub-heading" style="margin: 0">About</h1>
-        <h2>
-          I'm Timo Beyer, I develop Websites, Games and general Software.<br />
-          I learned a lot during my Vocational Training as a Fullstack
-          Developer, still I had my biggest realization with the fact that there
-          is no space to express creativity in the way I define the art of
-          software developing. Therefor I founded this company, with the goal of
-          creating unique software for unique people and projects.
-        </h2>
-        <div style="width: 100%">
-          <div class="timeline-view">
-            <span>11.2018 - 06.2021</span>
-            <span>Fullstack Developer Apprenticeship</span>
-          </div>
-          <div class="timeline-view">
-            <span>02.2021</span>
-            <span>First customer Project</span>
-          </div>
-          <div class="timeline-view">
-            <span>01.04.2021</span>
-            <span>Founded Tybe Media</span>
-          </div>
-          <div class="timeline-view">
-            <span>23.06.2021</span>
-            <span>Fulltime Self-Employed</span>
-          </div>
+    <img src="../CutoutMe.png" />
+  </div>
+  <div class="about-container">
+    <img src="codingShot.jpg" />
+    <div id="about">
+      <h1 class="sub-heading" style="margin: 0">About</h1>
+      <h2>
+        I'm Timo Beyer, I develop Websites, Games and general Software.<br />
+        I learned a lot during my Vocational Training as a Fullstack
+        Developer, still I had my biggest realization with the fact that there
+        is no space to express creativity in the way I define the art of
+        software developing. Therefor I founded this company, with the goal of
+        creating unique software for unique people and projects.
+      </h2>
+      <div style="width: 100%">
+        <div class="timeline-view">
+          <span>11.2018 - 06.2021</span>
+          <span>Fullstack Developer Apprenticeship</span>
         </div>
-        <!-- <div class="gauge-view">
+        <div class="timeline-view">
+          <span>02.2021</span>
+          <span>First customer Project</span>
+        </div>
+        <div class="timeline-view">
+          <span>01.04.2021</span>
+          <span>Founded Tybe Media</span>
+        </div>
+        <div class="timeline-view">
+          <span>23.06.2021</span>
+          <span>Fulltime Self-Employed</span>
+        </div>
+      </div>
+      <!-- <div class="gauge-view">
           <span> 5 </span>
           <span> Projects </span>
         </div> -->
-      </div>
     </div>
-    <!-- Projects -->
-    <h1 class="sub-heading">Projects</h1>
-    <div class="projects-container" id="projects" style="margin-bottom: 5em;">  
-      <a href="https://www.bautalent.de" target="_blank">
-        <img src="./Bautalent-Preview.png" alt="" />
-        <h2>Koinzer Altbausanierung</h2>
-        <h3>Webdesign & Google SEO</h3>
+  </div>
+  <!-- Projects -->
+  <h1 class="sub-heading">Projects</h1>
+  <div class="projects-container" id="projects" style="margin-bottom: 5em;">
+    <a href="https://www.bautalent.de" target="_blank">
+      <img src="./Bautalent-Preview.png" alt="" />
+      <h2>Koinzer Altbausanierung</h2>
+      <h3>Webdesign & Google SEO</h3>
     </a>
     <a href="https://www.logodesign-tjorben.de" target="_blank">
-        <img src="Logodesign-Preview.png" alt="" />
-        <h2>Tjorben Logodesign</h2>
-        <h3>Webdesign</h3>
-      </a>
-      <a href="#" target="_blank">
-        <img src="ComingSoon.png" alt="" />
-        <h2>Nina Goretzki Personal Landingpage</h2>
-        <h3>Webdesign</h3>
+      <img src="Logodesign-Preview.png" alt="" />
+      <h2>Tjorben Logodesign</h2>
+      <h3>Webdesign</h3>
     </a>
     <a href="#" target="_blank">
-        <img src="ComingSoon.png" alt="" />
-        <h2>Sarah Trettin Personal Landingpage</h2>
-        <h3>Webdesign</h3>
-      </a>
-    </div>
-    <hr>
-    <!-- Contact -->
-    <h1 class="sub-heading" id="contact">Let's Work together</h1>
-    <div class="contact-container">
-      <div style="width: 100%">
-        <!-- Contact Methods -->
-        <div class="socials">
-          <a href="https://www.instagram.com/tybemedia/" target="_blank">
-            <img src="instagram-icon.webp" />
-            <span>Instagram</span></a
-          >
-          <a href="https://wa.me/message/BS7POIV7DNAOH1" target="_blank">
-            <img src="whatsapp-icon.png" />
-            <span>Whatsapp</span></a
-          >
-          <a href="tel:+49 1515 4738083"> <img src="phone.png" /><span> Phone</span></a>
-          <a href="mailto:info@tybe-media.com"><img src="mail.png"><span>Mail</span></img></a>
-        </div>
-        <!-- Form -->
+      <img src="ComingSoon.png" alt="" />
+      <h2>Nina Goretzki Personal Landingpage</h2>
+      <h3>Webdesign</h3>
+    </a>
+    <a href="#" target="_blank">
+      <img src="ComingSoon.png" alt="" />
+      <h2>Sarah Trettin Personal Landingpage</h2>
+      <h3>Webdesign</h3>
+    </a>
+  </div>
+  <hr>
+  <!-- Contact -->
+  <h1 class="sub-heading" id="contact">Let's Work together</h1>
+  <div class="contact-container">
+    <div style="width: 100%">
+      <!-- Contact Methods -->
+      <div class="socials">
+        <a href="https://www.instagram.com/tybemedia/" target="_blank">
+          <img src="instagram-icon.webp" />
+          <span>Instagram</span></a>
+        <a href="https://wa.me/message/BS7POIV7DNAOH1" target="_blank">
+          <img src="whatsapp-icon.png" />
+          <span>Whatsapp</span></a>
+        <a href="tel:+49 1515 4738083"> <img src="phone.png" /><span> Phone</span></a>
+        <a href="mailto:info@tybe-media.com"><img src="mail.png"><span>Mail</span></img></a>
+      </div>
+      <!-- Form -->
 
-        <form class="contact-form" id="contact-form">
-          <input type="text" placeholder="Name" id="name" autocomplete="off" />
-          <input
-            type="text"
-            placeholder="Email"
-            id="mail"
-            autocomplete="off"
-            required
-          />
-          <textarea
-            placeholder="Ihre Nachricht"
-            id="message"
-            autocomplete="off"
-            required
-          ></textarea>
-          <input
-            type="submit"
-            class="primary-button"
-            value="Send Message"
-            onclick="sendEmail()"
-            id="sendMailButton"
-          />
-        </form>
-      </div>
-      <img
-        src="Timo.png"/>
+      <form class="contact-form" id="contact-form">
+        <input type="text" placeholder="Name" id="name" autocomplete="off" />
+        <input type="text" placeholder="Email" id="mail" autocomplete="off" required />
+        <textarea placeholder="Ihre Nachricht" id="message" autocomplete="off" required></textarea>
+        <input type="submit" class="primary-button" value="Send Message" onclick="sendEmail()" id="sendMailButton" />
+      </form>
     </div>
-    <footer>
-      <div>
-        <span>©2021 Tybe Media by Timo Beyer</span>
-        <span>Contact</span>
-        <span>Impress</span>
-      </div>
-    </footer>
-  </body>
+    <img src="Timo.png" />
+  </div>
+  <footer>
+    <div>
+      <span>©2021 Tybe Media by Timo Beyer</span>
+      <span>Contact</span>
+      <span>Impress</span>
+    </div>
+  </footer>
+</body>
+
 </html>

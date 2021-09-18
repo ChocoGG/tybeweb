@@ -306,6 +306,9 @@ footer div {
   .socials a {
     width: 100% !important;
   }
+  .socials a img {
+    width: 64px !important;
+  }
 
   .welcome-container {
     flex-direction: column;
