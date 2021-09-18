@@ -32,16 +32,23 @@ div{
     font-size: 36pt;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
     img{
         width: 150px;
         margin-right: 0.25em;
     }
     h1{
     font-family: 'Indie Flower', cursive;
+    margin: 0;
+    font-size: 34pt;
     }
 }
 }
 canvas {
     opacity: 0.3;
     position: absolute;
+}
+hr{
+    opacity: 0.3;
 }
