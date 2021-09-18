@@ -7,7 +7,6 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: black;
   overflow-x: hidden;
 }
 
@@ -18,8 +17,10 @@ a {
 
 .intro-image img {
   width: 100vw;
-  height: 500px;
+  height: 100vh;
   object-fit: cover;
+  position: absolute;
+  z-index: -1;
 }
 
 .content {
@@ -31,13 +32,15 @@ a {
 .socials div {
   margin: 1em;
   font-size: 36pt;
-  font-family: "Indie Flower", cursive;
   display: flex;
   align-items: center;
 }
 .socials div img {
   width: 150px;
   margin-right: 0.25em;
+}
+.socials div h1 {
+  font-family: "Indie Flower", cursive;
 }
 
 canvas {
