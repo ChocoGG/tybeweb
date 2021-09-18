@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap");
+html, body {
+  scrollbar-width: thin;
+  color: white;
+  font-weight: lighter;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: black;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.intro-image img {
+  width: 100vw;
+  height: 500px;
+  object-fit: cover;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.socials div {
+  margin: 1em;
+  font-size: 36pt;
+  font-family: "Indie Flower", cursive;
+  display: flex;
+  align-items: center;
+}
+.socials div img {
+  width: 150px;
+  margin-right: 2em;
+}
+
+canvas {
+  opacity: 0.3;
+  position: absolute;
+}

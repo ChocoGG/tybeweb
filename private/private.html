@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timo Beyer</title>
+    <link rel="stylesheet" href="dist/style.css" />
+    <script>
+      function matrix() {
+        // Initialising the canvas
+        var canvas = document.querySelector("canvas"),
+          ctx = canvas.getContext("2d");
+
+        // Setting the width and height of the canvas
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Setting up the letters
+        var letters =
+          "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ";
+        letters = letters.split("");
+
+        // Setting up the columns
+        var fontSize = 10,
+          columns = canvas.width / fontSize;
+
+        // Setting up the drops
+        var drops = [];
+        for (var i = 0; i < columns; i++) {
+          drops[i] = 1;
+        }
+
+        // Setting up the draw function
+        function draw() {
+          ctx.fillStyle = "rgba(0, 0, 0, .1)";
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          for (var i = 0; i < drops.length; i++) {
+            var text = letters[Math.floor(Math.random() * letters.length)];
+            ctx.fillStyle = "#00f";
+            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+            drops[i]++;
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
+              drops[i] = 0;
+            }
+          }
+        }
+
+        // Loop the animation
+        setInterval(draw, 33);
+      }
+    </script>
+  </head>
+  <body onload="matrix()">
+    <canvas> </canvas>
+    <!-- Intro Image -->
+    <div class="intro-image">
+      <img
+        src="https://images.unsplash.com/photo-1536183922588-166604504d5e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+      />
+    </div>
+    <!-- Image -->
+    <div class="content">
+      <!-- Socials -->
+      <div class="socials">
+        <a
+          href="https://www.snapchat.com/add/timo.o0?share_id=yGiaP_4kTkE&locale=de-DE"
+          target="_blank"
+          ><div><img src="./snaapchat.png" />Snapchat</div></a
+        >
+        <a href="https://www.instagram.com/tim0__o/"
+          ><div><img src="./Instagram.png" />Instagram</div></a
+        >
+        <a href="https://tybe-media.com"
+          ><div><img src="./tybemedia.png" />My Business</div></a
+        >
+        <a href="https://www.instagram.com/tybemedia/"
+          ><div><img src="./Instagram.png" />My Business IG</div></a
+        >
+        <a href="https://tellonym.me/timobe"
+          ><div><img src="./tellonym.png" />Tellonym</div></a
+        >
+      </div>
+    </div>
+  </body>
+</html>
